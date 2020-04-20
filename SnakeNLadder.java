@@ -42,7 +42,7 @@ class SnakeNLadder extends JFrame implements ActionListener
 		jp2 = new JPanel();
 		jp2.setLayout(null);
 		jl = new JLabel[100];
-		dice = new JButton(new ImageIcon(getClass().getResource("dice\\3.jpg")));
+		dice = new JButton(new ImageIcon(getClass().getResource("images/3.jpg")));
 		dice.setBackground(Color.BLACK);
 		dice.addActionListener(this);
 		dice.setBounds(1100,300,80,80);
@@ -60,7 +60,7 @@ l2.setBounds(1100,380,400,100);
 		{
 			String str = Integer.toString(game[i]);
 			jl[i] = new JLabel();
-			jl[i].setIcon(new ImageIcon(str+".PNG"));
+			jl[i].setIcon(new ImageIcon("images/"+str+".PNG"));
 			jp1.add(jl[i]);		
 		}
 		w1 = new JLabel("WON !");
@@ -93,7 +93,7 @@ l2.setBounds(1100,380,400,100);
 		{
 			int n = rand.nextInt(6) +1;
 			System.out.println(n);
-			dice.setIcon(new ImageIcon(getClass().getResource("dice\\"+Integer.toString(n)+".jpg")));
+			dice.setIcon(new ImageIcon(getClass().getResource("images/"+Integer.toString(n)+".jpg")));
 			play(n);
 						
 		}
@@ -136,17 +136,17 @@ l2.setBounds(1100,380,400,100);
 			if(p1+k==100)
 			{
 				jp2.add(w1);
-				jl[0].setIcon(new ImageIcon("green.png"));
+				jl[0].setIcon(new ImageIcon("images/green.png"));
 				System.out.println("Player 1 wins");
 				w1.setBounds(950,152,200,100);
 				
 				if(flag==1)
 				{
-					jl[prev1].setIcon(new ImageIcon("blue.png"));
+					jl[prev1].setIcon(new ImageIcon("images/blue.png"));
 				}
 				else
 				{
-					jl[prev1].setIcon(new ImageIcon(Integer.toString(game[prev1])+".PNG"));
+					jl[prev1].setIcon(new ImageIcon("images/"+Integer.toString(game[prev1])+".PNG"));
 				}
 				dice.setEnabled(false);
 				
@@ -172,23 +172,23 @@ l2.setBounds(1100,380,400,100);
 					p11 = game[p11];
 				}
 
-				jl[arr[p1]].setIcon(new ImageIcon("green.png"));
+				jl[arr[p1]].setIcon(new ImageIcon("images/green.png"));
 				
 				
 		//both at same position
 				if(flag==1)
 				{
-					jl[prev1].setIcon(new ImageIcon("blue.png"));
+					jl[prev1].setIcon(new ImageIcon("images/blue.png"));
 
 				}
 				else
 				{
-					jl[prev1].setIcon(new ImageIcon(Integer.toString(game[prev1])+".PNG"));
+					jl[prev1].setIcon(new ImageIcon("images/"+Integer.toString(game[prev1])+".PNG"));
 				}
 				if(p1==p2)
 				{
 					flag=1;
-					jl[arr[p1]].setIcon(new ImageIcon("bg.png"));
+					jl[arr[p1]].setIcon(new ImageIcon("images/bg.png"));
 				}
 				else
 				{
@@ -205,7 +205,7 @@ l2.setBounds(1100,380,400,100);
 		{
 			if(p2+k==100)
 			{
-				jl[0].setIcon(new ImageIcon("blue.png"));
+				jl[0].setIcon(new ImageIcon("images/blue.png"));
 				System.out.println("Player 2 wins");
 				w1.setBounds(1250,152,200,100);
 				jp2.add(w1);
@@ -215,11 +215,11 @@ l2.setBounds(1100,380,400,100);
 
 				if(flag==1)
 				{
-					jl[prev2].setIcon(new ImageIcon("green.png"));
+					jl[prev2].setIcon(new ImageIcon("images/green.png"));
 				}
 				else
 				{
-					jl[prev2].setIcon(new ImageIcon(Integer.toString(game[prev2])+".PNG"));
+					jl[prev2].setIcon(new ImageIcon("images/"+Integer.toString(game[prev2])+".PNG"));
 				}
 			}
 			else if((p2+k) > 100)
@@ -241,23 +241,23 @@ l2.setBounds(1100,380,400,100);
 				{
 					p2 = p2;
 				}
-					jl[arr[p2]].setIcon(new ImageIcon("blue.png"));	
+					jl[arr[p2]].setIcon(new ImageIcon("images/blue.png"));	
 				
 			//both at same position
 				if(flag==1)
 				{
-					jl[prev2].setIcon(new ImageIcon("green.png"));
+					jl[prev2].setIcon(new ImageIcon("images/green.png"));
 
 				}
 				else
 				{
-					jl[prev2].setIcon(new ImageIcon(Integer.toString(game[prev2])+".PNG"));
+					jl[prev2].setIcon(new ImageIcon("images/"+Integer.toString(game[prev2])+".PNG"));
 
 				}
 				if(p1==p2)
 				{
 					flag=1;
-					jl[arr[p2]].setIcon(new ImageIcon("bg.png"));	
+					jl[arr[p2]].setIcon(new ImageIcon("images/bg.png"));	
 				}
 				else
 				{
